@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/pic"
+    tools:context=".UpdatePatientActivity">
+
+    <TextView
+
+        android:id="@+id/editPatientHeading"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="26dp"
+        android:fontFamily="@font/poppins"
+        android:text="Update Patient Details."
+        android:textColor="@color/green"
+        android:textSize="24sp"
+        android:layout_marginStart="85dp"
+        />
+
+    <ImageView
+        android:id="@+id/updateSaveButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignTop="@id/editPatientHeading"
+        android:layout_marginEnd="16dp"
+        android:src="@drawable/baseline_done_24" />
+
+    <EditText
+        android:id="@+id/updateNameEditText"
+        android:layout_width="400dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/editPatientHeading"
+        android:layout_marginTop="146dp"
+        android:background="@drawable/blue_border"
+        android:fontFamily="@font/poppins"
+        android:hint="Enter Name"
+        android:padding="12dp"
+        android:textSize="18sp"
+        android:layout_marginStart="4dp"/>
+
+    <EditText
+        android:id="@+id/updateAgeEditText"
+        android:layout_width="400dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/updateNameEditText"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/blue_border"
+        android:fontFamily="@font/poppins"
+        android:hint="Enter Age"
+        android:inputType="number"
+        android:padding="12dp"
+        android:textSize="18sp"
+        android:layout_marginStart="4dp"/>
+
+    <EditText
+        android:id="@+id/updateGenderEditText"
+        android:layout_width="400dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/updateAgeEditText"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/blue_border"
+        android:fontFamily="@font/poppins"
+        android:hint="Enter Gender"
+        android:padding="12dp"
+        android:textSize="18sp"
+        android:layout_marginStart="4dp"/>
+
+    <EditText
+        android:id="@+id/updateContactEditText"
+        android:layout_width="400dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/updateGenderEditText"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/blue_border"
+        android:fontFamily="@font/poppins"
+        android:hint="Enter Contact"
+        android:inputType="phone"
+        android:padding="12dp"
+        android:textSize="18sp"
+        android:layout_marginStart="4dp"/>
+
+    <EditText
+        android:id="@+id/updateHistoryEditText"
+        android:layout_width="400dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/updateContactEditText"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/blue_border"
+        android:fontFamily="@font/poppins"
+        android:hint="Enter Medical History"
+        android:padding="12dp"
+        android:textSize="18sp"
+        android:layout_marginStart="4dp"/>
+
+</RelativeLayout>
