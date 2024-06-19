@@ -31,6 +31,7 @@ class UpdatePatientActivity : AppCompatActivity() {
         binding.updateContactEditText.setText(patient.contact)
         binding.updateHistoryEditText.setText(patient.history)
 
+        // Retrieve updated patient information from EditText fields
         binding.updateSaveButton.setOnClickListener {
             val newName = binding.updateNameEditText.text.toString()
             val newAge = binding.updateAgeEditText.text.toString().toInt()
@@ -38,7 +39,10 @@ class UpdatePatientActivity : AppCompatActivity() {
             val newContact = binding.updateContactEditText.text.toString()
             val newHistory = binding.updateHistoryEditText.text.toString()
 
+            // Create a new Patient object with updated information
             val updatedPatient = Patient(patientId, newName, newAge, newGender, newContact, newHistory)
+
+            // Update the patient information in the database
             db.updatePatient(updatedPatient)
 
             finish()

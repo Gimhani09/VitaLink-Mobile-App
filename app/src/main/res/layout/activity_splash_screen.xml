@@ -29,31 +29,36 @@
             android:layout_marginTop="20dp"
             android:paddingBottom="0sp"
             android:text="VitalLink"
-            android:textColor="@color/green"
+            android:textColor="#16DD1F"
             android:textSize="54sp"
             android:textStyle="normal"
             android:layout_marginStart="55dp"
 
             />
 
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="A digital bridge to patient wellness and the continuum of care."
+            android:textSize="24sp"
+            android:textAlignment="center"
+            android:textColor="#289C53"
+            android:textStyle="normal"
+            android:layout_marginTop="40dp"
+            />
+
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="A digital bridge to patient wellness and the continuum of care."
-        android:textSize="24sp"
-        android:textAlignment="center"
         android:paddingBottom="250sp"
-        android:textColor="@color/green"
-        android:textStyle="normal"
         android:layout_gravity="center_horizontal"
-        android:layout_marginTop="120dp"
+        android:layout_marginTop="20dp"
         android:background="@drawable/page1"
 
-
-
-
-
         />
+
+
     </LinearLayout>
 
 

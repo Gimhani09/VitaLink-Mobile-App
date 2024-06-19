@@ -18,12 +18,24 @@
         android:textSize="24sp"
         android:layout_marginStart="135dp"/>
 
+    <SearchView
+        android:id="@+id/searchView"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_below="@id/patientsHeading"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="16dp"
+        android:autofillHints="Search Patients"
+
+
+        android:queryHint="Search by name" />
+
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/patientsRecyclerView"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_below="@id/patientsHeading"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="80dp"
         android:padding="16dp" />
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton

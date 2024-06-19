@@ -105,4 +105,27 @@ class PatientDatabaseHelper(context: Context) : SQLiteOpenHelper(context, DATABA
         db.delete(TABLE_NAME, whereClause, whereArgs)
         db.close()
     }
+
+    fun searchPatientsByName(name: String): List<Patient> {
+        val patientList = mutableListOf<Patient>()
+        val db = readableDatabase
+        val query = "SELECT * FROM $TABLE_NAME WHERE $COLUMN_NAME LIKE ?"
+        val cursor = db.rawQuery(query, arrayOf("%$name%"))
+
+        while (cursor.moveToNext()) {
+            val id = cursor.getInt(cursor.getColumnIndexOrThrow(COLUMN_ID))
+            val patientName = cursor.getString(cursor.getColumnIndexOrThrow(COLUMN_NAME))
+            val age = cursor.getInt(cursor.getColumnIndexOrThrow(COLUMN_AGE))
+            val gender = cursor.getString(cursor.getColumnIndexOrThrow(COLUMN_GENDER))
+            val contact = cursor.getString(cursor.getColumnIndexOrThrow(COLUMN_CONTACT))
+            val history = cursor.getString(cursor.getColumnIndexOrThrow(COLUMN_HISTORY))
+
+            val patient = Patient(id, patientName, age, gender, contact, history)
+            patientList.add(patient)
+        }
+        cursor.close()
+        db.close()
+        return patientList
+    }
+
 }
